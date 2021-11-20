@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>kiểm tra số nguyên dương</title>
+  </head>
+  <body>
+    <label for="inputNumber">Enter a number:</label>
+    <input type="number" id="inputNumber" />
+
+    <br />
+
+    <div>
+      Message:
+      <span id="messageBox"></span>
+    </div>
+  </body>
+  <script>
+    {
+      const inputNumber = document.getElementById("inputNumber");
+      const showBox = document.getElementById("messageBox");
+
+      const f_update = () => {
+        if (inputNumber.value >= 0) {
+          showBox.textContent = "okay";
+        } else {
+          showBox.textContent = "đâu phải số nguyên dương đâu chế";
+        }
+      };
+
+      inputNumber.addEventListener("input", f_update, false);
+
+      f_update();
+    }
+  </script>
+</html>
