@@ -21,10 +21,14 @@
       const showBox = document.getElementById("messageBox");
 
       const f_update = () => {
-        if (inputNumber.value >= 0) {
-          showBox.textContent = "okay";
+        if (
+          inputNumber.value >= 0 &&
+          (inputNumber.value % 2 == 0 || inputNumber.value % 2 == 1)
+        ) {
+          showBox.textContent = "okay, đúng số nguyên dương rồi";
         } else {
-          showBox.textContent = "đâu phải số nguyên dương đâu chế";
+          showBox.textContent =
+            "đâu phải số nguyên dương đâu chế, nhập lại hen";
         }
       };
 
