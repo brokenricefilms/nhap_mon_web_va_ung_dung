@@ -16,24 +16,22 @@
     </div>
   </body>
   <script>
-    {
-      const inputNumber = document.getElementById("inputNumber");
-      const showBox = document.getElementById("messageBox");
+    const inputNumber = document.getElementById("inputNumber");
+    const showBox = document.getElementById("messageBox");
 
-      const f_update = () => {
-        if (
-          inputNumber.value >= 0 &&
-          (inputNumber.value % 2 == 0 || inputNumber.value % 2 == 1)
-        ) {
-          showBox.textContent = "okay, đúng số nguyên dương rồi";
-        } else {
-          showBox.textContent = "đâu phải số nguyên dương đâu, nhập lại hen";
-        }
-      };
+    const f_update = () => {
+      if (
+        inputNumber.value >= 0 &&
+        (inputNumber.value % 2 == 0 || inputNumber.value % 2 == 1)
+      ) {
+        showBox.textContent = "okay, đúng số nguyên dương rồi";
+      } else {
+        showBox.textContent = "đâu phải số nguyên dương đâu, nhập lại hen";
+      }
+    };
 
-      inputNumber.addEventListener("input", f_update, false);
+    inputNumber.addEventListener("input", f_update, false);
 
-      f_update();
-    }
+    f_update();
   </script>
 </html>
